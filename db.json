@@ -1,0 +1,1107 @@
+{
+  "users": [
+    {
+      "name": "John doe",
+      "email": "johndoe@example.com",
+      "password": "johndoe123",
+      "mobile": "123456890",
+      "createdAt": "2026-03-29T18:07:10.555Z",
+      "id": 1
+    },
+    {
+      "name": "Max",
+      "email": "Max@example.com",
+      "password": "123456",
+      "mobile": "9876543210",
+      "createdAt": "2026-03-29T19:03:41.267Z",
+      "id": 2
+    }
+  ],
+  "units": [
+    {
+      "id": 1,
+      "type": "Length",
+      "label": "Kilometer",
+      "symbol": "km"
+    },
+    {
+      "id": 2,
+      "type": "Length",
+      "label": "Meter",
+      "symbol": "m"
+    },
+    {
+      "id": 3,
+      "type": "Length",
+      "label": "Centimeter",
+      "symbol": "cm"
+    },
+    {
+      "id": 4,
+      "type": "Length",
+      "label": "Millimeter",
+      "symbol": "mm"
+    },
+    {
+      "id": 5,
+      "type": "Length",
+      "label": "Mile",
+      "symbol": "mi"
+    },
+    {
+      "id": 6,
+      "type": "Length",
+      "label": "Yard",
+      "symbol": "yd"
+    },
+    {
+      "id": 7,
+      "type": "Length",
+      "label": "Foot",
+      "symbol": "ft"
+    },
+    {
+      "id": 8,
+      "type": "Length",
+      "label": "Inch",
+      "symbol": "in"
+    },
+    {
+      "id": 9,
+      "type": "Weight",
+      "label": "Kilogram",
+      "symbol": "kg"
+    },
+    {
+      "id": 10,
+      "type": "Weight",
+      "label": "Gram",
+      "symbol": "g"
+    },
+    {
+      "id": 11,
+      "type": "Weight",
+      "label": "Milligram",
+      "symbol": "mg"
+    },
+    {
+      "id": 12,
+      "type": "Weight",
+      "label": "Pound",
+      "symbol": "lb"
+    },
+    {
+      "id": 13,
+      "type": "Weight",
+      "label": "Ounce",
+      "symbol": "oz"
+    },
+    {
+      "id": 14,
+      "type": "Weight",
+      "label": "Tonne",
+      "symbol": "t"
+    },
+    {
+      "id": 15,
+      "type": "Temperature",
+      "label": "Celsius",
+      "symbol": "C"
+    },
+    {
+      "id": 16,
+      "type": "Temperature",
+      "label": "Fahrenheit",
+      "symbol": "F"
+    },
+    {
+      "id": 17,
+      "type": "Temperature",
+      "label": "Kelvin",
+      "symbol": "K"
+    },
+    {
+      "id": 18,
+      "type": "Volume",
+      "label": "Liter",
+      "symbol": "L"
+    },
+    {
+      "id": 19,
+      "type": "Volume",
+      "label": "Milliliter",
+      "symbol": "mL"
+    },
+    {
+      "id": 20,
+      "type": "Volume",
+      "label": "Cubic Meter",
+      "symbol": "m3"
+    },
+    {
+      "id": 21,
+      "type": "Volume",
+      "label": "Gallon (US)",
+      "symbol": "gal"
+    },
+    {
+      "id": 22,
+      "type": "Volume",
+      "label": "Fluid Ounce",
+      "symbol": "fl_oz"
+    },
+    {
+      "id": 23,
+      "type": "Volume",
+      "label": "Cup",
+      "symbol": "cup"
+    },
+    {
+      "id": 24,
+      "type": "Volume",
+      "label": "Pint",
+      "symbol": "pt"
+    }
+  ],
+  "conversions": [
+    {
+      "id": 1,
+      "from": "km",
+      "to": "m",
+      "factor": 1000,
+      "formula": null
+    },
+    {
+      "id": 2,
+      "from": "km",
+      "to": "cm",
+      "factor": 100000,
+      "formula": null
+    },
+    {
+      "id": 3,
+      "from": "km",
+      "to": "mm",
+      "factor": 1000000,
+      "formula": null
+    },
+    {
+      "id": 4,
+      "from": "km",
+      "to": "mi",
+      "factor": 0.621371,
+      "formula": null
+    },
+    {
+      "id": 5,
+      "from": "km",
+      "to": "yd",
+      "factor": 1093.61,
+      "formula": null
+    },
+    {
+      "id": 6,
+      "from": "km",
+      "to": "ft",
+      "factor": 3280.84,
+      "formula": null
+    },
+    {
+      "id": 7,
+      "from": "km",
+      "to": "in",
+      "factor": 39370.1,
+      "formula": null
+    },
+    {
+      "id": 8,
+      "from": "m",
+      "to": "km",
+      "factor": 0.001,
+      "formula": null
+    },
+    {
+      "id": 9,
+      "from": "m",
+      "to": "cm",
+      "factor": 100,
+      "formula": null
+    },
+    {
+      "id": 10,
+      "from": "m",
+      "to": "mm",
+      "factor": 1000,
+      "formula": null
+    },
+    {
+      "id": 11,
+      "from": "m",
+      "to": "mi",
+      "factor": 0.000621371,
+      "formula": null
+    },
+    {
+      "id": 12,
+      "from": "m",
+      "to": "yd",
+      "factor": 1.09361,
+      "formula": null
+    },
+    {
+      "id": 13,
+      "from": "m",
+      "to": "ft",
+      "factor": 3.28084,
+      "formula": null
+    },
+    {
+      "id": 14,
+      "from": "m",
+      "to": "in",
+      "factor": 39.3701,
+      "formula": null
+    },
+    {
+      "id": 15,
+      "from": "cm",
+      "to": "km",
+      "factor": 0.00001,
+      "formula": null
+    },
+    {
+      "id": 16,
+      "from": "cm",
+      "to": "m",
+      "factor": 0.01,
+      "formula": null
+    },
+    {
+      "id": 17,
+      "from": "cm",
+      "to": "mm",
+      "factor": 10,
+      "formula": null
+    },
+    {
+      "id": 18,
+      "from": "cm",
+      "to": "mi",
+      "factor": 0.0000062137,
+      "formula": null
+    },
+    {
+      "id": 19,
+      "from": "cm",
+      "to": "yd",
+      "factor": 0.0109361,
+      "formula": null
+    },
+    {
+      "id": 20,
+      "from": "cm",
+      "to": "ft",
+      "factor": 0.0328084,
+      "formula": null
+    },
+    {
+      "id": 21,
+      "from": "cm",
+      "to": "in",
+      "factor": 0.393701,
+      "formula": null
+    },
+    {
+      "id": 22,
+      "from": "mm",
+      "to": "km",
+      "factor": 0.000001,
+      "formula": null
+    },
+    {
+      "id": 23,
+      "from": "mm",
+      "to": "m",
+      "factor": 0.001,
+      "formula": null
+    },
+    {
+      "id": 24,
+      "from": "mm",
+      "to": "cm",
+      "factor": 0.1,
+      "formula": null
+    },
+    {
+      "id": 25,
+      "from": "mm",
+      "to": "mi",
+      "factor": 6.2137e-7,
+      "formula": null
+    },
+    {
+      "id": 26,
+      "from": "mm",
+      "to": "yd",
+      "factor": 0.00109361,
+      "formula": null
+    },
+    {
+      "id": 27,
+      "from": "mm",
+      "to": "ft",
+      "factor": 0.00328084,
+      "formula": null
+    },
+    {
+      "id": 28,
+      "from": "mm",
+      "to": "in",
+      "factor": 0.0393701,
+      "formula": null
+    },
+    {
+      "id": 29,
+      "from": "mi",
+      "to": "km",
+      "factor": 1.60934,
+      "formula": null
+    },
+    {
+      "id": 30,
+      "from": "mi",
+      "to": "m",
+      "factor": 1609.34,
+      "formula": null
+    },
+    {
+      "id": 31,
+      "from": "mi",
+      "to": "cm",
+      "factor": 160934,
+      "formula": null
+    },
+    {
+      "id": 32,
+      "from": "mi",
+      "to": "mm",
+      "factor": 1609340,
+      "formula": null
+    },
+    {
+      "id": 33,
+      "from": "mi",
+      "to": "yd",
+      "factor": 1760,
+      "formula": null
+    },
+    {
+      "id": 34,
+      "from": "mi",
+      "to": "ft",
+      "factor": 5280,
+      "formula": null
+    },
+    {
+      "id": 35,
+      "from": "mi",
+      "to": "in",
+      "factor": 63360,
+      "formula": null
+    },
+    {
+      "id": 36,
+      "from": "yd",
+      "to": "km",
+      "factor": 0.0009144,
+      "formula": null
+    },
+    {
+      "id": 37,
+      "from": "yd",
+      "to": "m",
+      "factor": 0.9144,
+      "formula": null
+    },
+    {
+      "id": 38,
+      "from": "yd",
+      "to": "cm",
+      "factor": 91.44,
+      "formula": null
+    },
+    {
+      "id": 39,
+      "from": "yd",
+      "to": "mm",
+      "factor": 914.4,
+      "formula": null
+    },
+    {
+      "id": 40,
+      "from": "yd",
+      "to": "mi",
+      "factor": 0.000568182,
+      "formula": null
+    },
+    {
+      "id": 41,
+      "from": "yd",
+      "to": "ft",
+      "factor": 3,
+      "formula": null
+    },
+    {
+      "id": 42,
+      "from": "yd",
+      "to": "in",
+      "factor": 36,
+      "formula": null
+    },
+    {
+      "id": 43,
+      "from": "ft",
+      "to": "km",
+      "factor": 0.0003048,
+      "formula": null
+    },
+    {
+      "id": 44,
+      "from": "ft",
+      "to": "m",
+      "factor": 0.3048,
+      "formula": null
+    },
+    {
+      "id": 45,
+      "from": "ft",
+      "to": "cm",
+      "factor": 30.48,
+      "formula": null
+    },
+    {
+      "id": 46,
+      "from": "ft",
+      "to": "mm",
+      "factor": 304.8,
+      "formula": null
+    },
+    {
+      "id": 47,
+      "from": "ft",
+      "to": "mi",
+      "factor": 0.000189394,
+      "formula": null
+    },
+    {
+      "id": 48,
+      "from": "ft",
+      "to": "yd",
+      "factor": 0.333333,
+      "formula": null
+    },
+    {
+      "id": 49,
+      "from": "ft",
+      "to": "in",
+      "factor": 12,
+      "formula": null
+    },
+    {
+      "id": 50,
+      "from": "in",
+      "to": "km",
+      "factor": 0.0000254,
+      "formula": null
+    },
+    {
+      "id": 51,
+      "from": "in",
+      "to": "m",
+      "factor": 0.0254,
+      "formula": null
+    },
+    {
+      "id": 52,
+      "from": "in",
+      "to": "cm",
+      "factor": 2.54,
+      "formula": null
+    },
+    {
+      "id": 53,
+      "from": "in",
+      "to": "mm",
+      "factor": 25.4,
+      "formula": null
+    },
+    {
+      "id": 54,
+      "from": "in",
+      "to": "mi",
+      "factor": 0.0000157828,
+      "formula": null
+    },
+    {
+      "id": 55,
+      "from": "in",
+      "to": "yd",
+      "factor": 0.0277778,
+      "formula": null
+    },
+    {
+      "id": 56,
+      "from": "in",
+      "to": "ft",
+      "factor": 0.0833333,
+      "formula": null
+    },
+    {
+      "id": 57,
+      "from": "kg",
+      "to": "g",
+      "factor": 1000,
+      "formula": null
+    },
+    {
+      "id": 58,
+      "from": "kg",
+      "to": "mg",
+      "factor": 1000000,
+      "formula": null
+    },
+    {
+      "id": 59,
+      "from": "kg",
+      "to": "lb",
+      "factor": 2.20462,
+      "formula": null
+    },
+    {
+      "id": 60,
+      "from": "kg",
+      "to": "oz",
+      "factor": 35.274,
+      "formula": null
+    },
+    {
+      "id": 61,
+      "from": "kg",
+      "to": "t",
+      "factor": 0.001,
+      "formula": null
+    },
+    {
+      "id": 62,
+      "from": "g",
+      "to": "kg",
+      "factor": 0.001,
+      "formula": null
+    },
+    {
+      "id": 63,
+      "from": "g",
+      "to": "mg",
+      "factor": 1000,
+      "formula": null
+    },
+    {
+      "id": 64,
+      "from": "g",
+      "to": "lb",
+      "factor": 0.00220462,
+      "formula": null
+    },
+    {
+      "id": 65,
+      "from": "g",
+      "to": "oz",
+      "factor": 0.035274,
+      "formula": null
+    },
+    {
+      "id": 66,
+      "from": "g",
+      "to": "t",
+      "factor": 0.000001,
+      "formula": null
+    },
+    {
+      "id": 67,
+      "from": "mg",
+      "to": "kg",
+      "factor": 0.000001,
+      "formula": null
+    },
+    {
+      "id": 68,
+      "from": "mg",
+      "to": "g",
+      "factor": 0.001,
+      "formula": null
+    },
+    {
+      "id": 69,
+      "from": "mg",
+      "to": "lb",
+      "factor": 0.0000022046,
+      "formula": null
+    },
+    {
+      "id": 70,
+      "from": "mg",
+      "to": "oz",
+      "factor": 0.000035274,
+      "formula": null
+    },
+    {
+      "id": 71,
+      "from": "mg",
+      "to": "t",
+      "factor": 1e-9,
+      "formula": null
+    },
+    {
+      "id": 72,
+      "from": "lb",
+      "to": "kg",
+      "factor": 0.453592,
+      "formula": null
+    },
+    {
+      "id": 73,
+      "from": "lb",
+      "to": "g",
+      "factor": 453.592,
+      "formula": null
+    },
+    {
+      "id": 74,
+      "from": "lb",
+      "to": "mg",
+      "factor": 453592,
+      "formula": null
+    },
+    {
+      "id": 75,
+      "from": "lb",
+      "to": "oz",
+      "factor": 16,
+      "formula": null
+    },
+    {
+      "id": 76,
+      "from": "lb",
+      "to": "t",
+      "factor": 0.000453592,
+      "formula": null
+    },
+    {
+      "id": 77,
+      "from": "oz",
+      "to": "kg",
+      "factor": 0.0283495,
+      "formula": null
+    },
+    {
+      "id": 78,
+      "from": "oz",
+      "to": "g",
+      "factor": 28.3495,
+      "formula": null
+    },
+    {
+      "id": 79,
+      "from": "oz",
+      "to": "mg",
+      "factor": 28349.5,
+      "formula": null
+    },
+    {
+      "id": 80,
+      "from": "oz",
+      "to": "lb",
+      "factor": 0.0625,
+      "formula": null
+    },
+    {
+      "id": 81,
+      "from": "oz",
+      "to": "t",
+      "factor": 0.00002835,
+      "formula": null
+    },
+    {
+      "id": 82,
+      "from": "t",
+      "to": "kg",
+      "factor": 1000,
+      "formula": null
+    },
+    {
+      "id": 83,
+      "from": "t",
+      "to": "g",
+      "factor": 1000000,
+      "formula": null
+    },
+    {
+      "id": 84,
+      "from": "t",
+      "to": "mg",
+      "factor": 1000000000,
+      "formula": null
+    },
+    {
+      "id": 85,
+      "from": "t",
+      "to": "lb",
+      "factor": 2204.62,
+      "formula": null
+    },
+    {
+      "id": 86,
+      "from": "t",
+      "to": "oz",
+      "factor": 35274,
+      "formula": null
+    },
+    {
+      "id": 87,
+      "from": "C",
+      "to": "F",
+      "factor": null,
+      "formula": "(v * 9/5) + 32"
+    },
+    {
+      "id": 88,
+      "from": "C",
+      "to": "K",
+      "factor": null,
+      "formula": "v + 273.15"
+    },
+    {
+      "id": 89,
+      "from": "F",
+      "to": "C",
+      "factor": null,
+      "formula": "(v - 32) * 5/9"
+    },
+    {
+      "id": 90,
+      "from": "F",
+      "to": "K",
+      "factor": null,
+      "formula": "((v - 32) * 5/9) + 273.15"
+    },
+    {
+      "id": 91,
+      "from": "K",
+      "to": "C",
+      "factor": null,
+      "formula": "v - 273.15"
+    },
+    {
+      "id": 92,
+      "from": "K",
+      "to": "F",
+      "factor": null,
+      "formula": "((v - 273.15) * 9/5) + 32"
+    },
+    {
+      "id": 93,
+      "from": "L",
+      "to": "mL",
+      "factor": 1000,
+      "formula": null
+    },
+    {
+      "id": 94,
+      "from": "L",
+      "to": "m3",
+      "factor": 0.001,
+      "formula": null
+    },
+    {
+      "id": 95,
+      "from": "L",
+      "to": "gal",
+      "factor": 0.264172,
+      "formula": null
+    },
+    {
+      "id": 96,
+      "from": "L",
+      "to": "fl_oz",
+      "factor": 33.814,
+      "formula": null
+    },
+    {
+      "id": 97,
+      "from": "L",
+      "to": "cup",
+      "factor": 4.22675,
+      "formula": null
+    },
+    {
+      "id": 98,
+      "from": "L",
+      "to": "pt",
+      "factor": 2.11338,
+      "formula": null
+    },
+    {
+      "id": 99,
+      "from": "mL",
+      "to": "L",
+      "factor": 0.001,
+      "formula": null
+    },
+    {
+      "id": 100,
+      "from": "mL",
+      "to": "m3",
+      "factor": 0.000001,
+      "formula": null
+    },
+    {
+      "id": 101,
+      "from": "mL",
+      "to": "gal",
+      "factor": 0.000264172,
+      "formula": null
+    },
+    {
+      "id": 102,
+      "from": "mL",
+      "to": "fl_oz",
+      "factor": 0.033814,
+      "formula": null
+    },
+    {
+      "id": 103,
+      "from": "mL",
+      "to": "cup",
+      "factor": 0.00422675,
+      "formula": null
+    },
+    {
+      "id": 104,
+      "from": "mL",
+      "to": "pt",
+      "factor": 0.00211338,
+      "formula": null
+    },
+    {
+      "id": 105,
+      "from": "m3",
+      "to": "L",
+      "factor": 1000,
+      "formula": null
+    },
+    {
+      "id": 106,
+      "from": "m3",
+      "to": "mL",
+      "factor": 1000000,
+      "formula": null
+    },
+    {
+      "id": 107,
+      "from": "m3",
+      "to": "gal",
+      "factor": 264.172,
+      "formula": null
+    },
+    {
+      "id": 108,
+      "from": "m3",
+      "to": "fl_oz",
+      "factor": 33814,
+      "formula": null
+    },
+    {
+      "id": 109,
+      "from": "m3",
+      "to": "cup",
+      "factor": 4226.75,
+      "formula": null
+    },
+    {
+      "id": 110,
+      "from": "m3",
+      "to": "pt",
+      "factor": 2113.38,
+      "formula": null
+    },
+    {
+      "id": 111,
+      "from": "gal",
+      "to": "L",
+      "factor": 3.78541,
+      "formula": null
+    },
+    {
+      "id": 112,
+      "from": "gal",
+      "to": "mL",
+      "factor": 3785.41,
+      "formula": null
+    },
+    {
+      "id": 113,
+      "from": "gal",
+      "to": "m3",
+      "factor": 0.00378541,
+      "formula": null
+    },
+    {
+      "id": 114,
+      "from": "gal",
+      "to": "fl_oz",
+      "factor": 128,
+      "formula": null
+    },
+    {
+      "id": 115,
+      "from": "gal",
+      "to": "cup",
+      "factor": 16,
+      "formula": null
+    },
+    {
+      "id": 116,
+      "from": "gal",
+      "to": "pt",
+      "factor": 8,
+      "formula": null
+    },
+    {
+      "id": 117,
+      "from": "fl_oz",
+      "to": "L",
+      "factor": 0.0295735,
+      "formula": null
+    },
+    {
+      "id": 118,
+      "from": "fl_oz",
+      "to": "mL",
+      "factor": 29.5735,
+      "formula": null
+    },
+    {
+      "id": 119,
+      "from": "fl_oz",
+      "to": "m3",
+      "factor": 0.000029574,
+      "formula": null
+    },
+    {
+      "id": 120,
+      "from": "fl_oz",
+      "to": "gal",
+      "factor": 0.0078125,
+      "formula": null
+    },
+    {
+      "id": 121,
+      "from": "fl_oz",
+      "to": "cup",
+      "factor": 0.125,
+      "formula": null
+    },
+    {
+      "id": 122,
+      "from": "fl_oz",
+      "to": "pt",
+      "factor": 0.0625,
+      "formula": null
+    },
+    {
+      "id": 123,
+      "from": "cup",
+      "to": "L",
+      "factor": 0.236588,
+      "formula": null
+    },
+    {
+      "id": 124,
+      "from": "cup",
+      "to": "mL",
+      "factor": 236.588,
+      "formula": null
+    },
+    {
+      "id": 125,
+      "from": "cup",
+      "to": "m3",
+      "factor": 0.000236588,
+      "formula": null
+    },
+    {
+      "id": 126,
+      "from": "cup",
+      "to": "gal",
+      "factor": 0.0625,
+      "formula": null
+    },
+    {
+      "id": 127,
+      "from": "cup",
+      "to": "fl_oz",
+      "factor": 8,
+      "formula": null
+    },
+    {
+      "id": 128,
+      "from": "cup",
+      "to": "pt",
+      "factor": 0.5,
+      "formula": null
+    },
+    {
+      "id": 129,
+      "from": "pt",
+      "to": "L",
+      "factor": 0.473176,
+      "formula": null
+    },
+    {
+      "id": 130,
+      "from": "pt",
+      "to": "mL",
+      "factor": 473.176,
+      "formula": null
+    },
+    {
+      "id": 131,
+      "from": "pt",
+      "to": "m3",
+      "factor": 0.000473176,
+      "formula": null
+    },
+    {
+      "id": 132,
+      "from": "pt",
+      "to": "gal",
+      "factor": 0.125,
+      "formula": null
+    },
+    {
+      "id": 133,
+      "from": "pt",
+      "to": "fl_oz",
+      "factor": 16,
+      "formula": null
+    },
+    {
+      "id": 134,
+      "from": "pt",
+      "to": "cup",
+      "factor": 2,
+      "formula": null
+    }
+  ],
+  "history": []
+}

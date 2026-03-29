@@ -1,0 +1,316 @@
+/* =============================================
+   GLOBAL STYLES & CSS VARIABLES
+   ============================================= */
+:root {
+    --primary: #4F6EF7;
+    --primary-dark: #3751D7;
+    --primary-light: #EEF1FE;
+    --accent: #10B981;
+    --accent-light: #D1FAE5;
+    --danger: #EF4444;
+    --danger-light: #FEE2E2;
+    --warning: #F59E0B;
+
+    --bg: #F0F4FF;
+    --surface: #FFFFFF;
+    --surface-2: #F8FAFF;
+    --border: #E2E8F0;
+
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, .08);
+    --shadow-md: 0 4px 16px rgba(15, 23, 42, .10);
+    --shadow-lg: 0 8px 32px rgba(15, 23, 42, .12);
+
+    --sidebar-width: 300px;
+    --header-height: 60px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--primary);
+    height: var(--header-height);
+    box-shadow: 0 2px 12px rgba(79, 110, 247, .25);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    font-size: 1.4rem;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    color: #fff;
+    letter-spacing: -.5px;
+}
+
+/* =============================================
+   MAIN LAYOUT
+   ============================================= */
+.app-main {
+    flex: 1;
+    display: flex;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* =============================================
+   CALCULATOR PANEL
+   ============================================= */
+.calculator-panel {
+    flex: 1;
+    background: var(--surface);
+    border-radius: var(--radius-xl);
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+    min-width: 0;
+}
+
+/* =============================================
+   HISTORY SIDEBAR
+   ============================================= */
+.history-sidebar {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+    background: var(--surface);
+    border-radius: var(--radius-xl);
+    margin-left: 18px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - var(--header-height) - 56px);
+    overflow: hidden;
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+/* =============================================
+   ERROR BANNER
+   ============================================= */
+.error-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: var(--danger);
+    color: #fff;
+    padding: 11px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.88rem;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, .3);
+    animation: slideDown .3s ease;
+}
+
+.error-banner.hidden {
+    display: none;
+}
+
+.error-banner button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: .8;
+    transition: opacity .2s;
+    flex-shrink: 0;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.error-banner button:hover {
+    opacity: 1;
+}
+
+/* =============================================
+   UTILITY
+   ============================================= */
+.hidden {
+    display: none !important;
+}
+
+/* =============================================
+   KEYFRAMES
+   ============================================= */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(79, 110, 247, .4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(79, 110, 247, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 110, 247, 0);
+    }
+}
+
+/* =============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================= */
+
+/* ── Tablet / large phone  ≤ 900px ── */
+@media (max-width: 900px) {
+    :root {
+        --sidebar-width: 260px;
+    }
+
+    .calculator-panel {
+        padding: 22px;
+    }
+}
+
+/* ── Tablet portrait / wide phone  ≤ 768px ── */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 56px;
+    }
+
+    .app-main {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .history-sidebar {
+        width: 100%;
+        margin-left: 0;
+        max-height: 340px;
+        /* Hidden by default on mobile — toggled by button */
+        display: none;
+    }
+
+    /* When toggled visible */
+    .history-sidebar.open {
+        display: flex;
+    }
+
+    .calculator-panel {
+        padding: 20px;
+    }
+}
+
+/* ── Phone  ≤ 520px ── */
+@media (max-width: 520px) {
+    .app-main {
+        padding: 12px;
+    }
+
+    .calculator-panel {
+        padding: 16px;
+        border-radius: var(--radius-lg);
+    }
+
+    .history-sidebar {
+        border-radius: var(--radius-lg);
+    }
+}
+
+/* ── Small phone  ≤ 380px ── */
+@media (max-width: 380px) {
+    .app-main {
+        padding: 8px;
+    }
+
+    .calculator-panel {
+        padding: 14px;
+        border-radius: var(--radius-md);
+    }
+
+    .history-sidebar {
+        border-radius: var(--radius-md);
+    }
+}
