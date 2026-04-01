@@ -1,0 +1,158 @@
+<div class="page-shell">
+  <header class="topbar">
+    <div class="brand-wrap">
+      <span class="brand-icon"></span>
+      <span class="brand-text">Quantity Measurement</span>
+    </div>
+
+    <div class="topbar-right">
+      <button class="history-chip" type="button" (click)="toggleHistorySidebar()">
+
+        <span>History</span>
+      </button>
+
+      <div class="user-chip">
+        <div class="avatar">{{ userInitials }}</div>
+        <span class="user-name">{{ userFirstName }}</span>
+      </div>
+
+      <button class="logout-btn" type="button" (click)="logout()">
+        <span>↪</span>
+        <span>Logout</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-body">
+    <section class="calculator-card">
+      <div class="section-label">CHOOSE TYPE</div>
+      <div class="type-grid">
+        @for (typeOpt of typeOptions; track typeOpt.type) {
+          <button
+            type="button"
+            class="type-card"
+            [class.active]="selectedType() === typeOpt.type"
+            (click)="changeType(typeOpt.type)">
+            <div class="type-icon">{{ typeOpt.icon }}</div>
+            <div class="type-name">{{ typeOpt.type }}</div>
+          </button>
+        }
+      </div>
+
+      <div class="section-label section-gap">CHOOSE ACTION</div>
+      <div class="action-tabs">
+        @for (action of actionOptions; track action) {
+          <button
+            type="button"
+            class="action-tab"
+            [class.active]="selectedAction() === action"
+            (click)="changeAction(action)">
+            {{ action }}
+          </button>
+        }
+      </div>
+
+      <div class="form-grid">
+        <div class="field-group">
+          <label class="field-label">FROM</label>
+          <input
+            class="value-input"
+            type="number"
+            [(ngModel)]="fromValue"
+            placeholder="0" />
+
+          <select class="unit-select" [(ngModel)]="fromUnit">
+            @for (unit of currentUnits(); track unit.symbol) {
+              <option [value]="unit.symbol">{{ unit.label }}</option>
+            }
+          </select>
+        </div>
+
+        @if (selectedAction() === 'Arithmetic') {
+          <div class="operator-panel">
+            <div class="operator-buttons">
+              @for (op of operatorOptions; track op) {
+                <button
+                  type="button"
+                  class="operator-btn"
+                  [class.active]="selectedOperator() === op"
+                  (click)="selectOperator(op)">
+                  {{ op === '+' ? '+' : op === '-' ? '−' : '÷' }}
+                </button>
+              }
+            </div>
+          </div>
+        } @else {
+          <div class="arrow-box">
+            <span class="arrow">→</span>
+          </div>
+        }
+
+        <div class="field-group">
+          <label class="field-label">TO</label>
+          <input
+            class="value-input"
+            type="number"
+            [(ngModel)]="toValue"
+            placeholder="0"
+            [disabled]="selectedAction() === 'Conversion'" />
+
+          <select class="unit-select" [(ngModel)]="toUnit">
+            @for (unit of currentUnits(); track unit.symbol) {
+              <option [value]="unit.symbol">{{ unit.label }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <button
+  type="button"
+  class="calculate-btn"
+  (click)="onCalculateClick()">
+  <span>Calculate</span>
+  <span class="calc-icon">✧</span>
+</button>
+
+      <div class="result-box" [class.has-error]="!!error()">
+        @if (!result() && !error()) {
+          <div class="result-placeholder">Enter values above and hit Calculate</div>
+        } @else if (error()) {
+          <div class="result-error">{{ error() }}</div>
+        } @else if (resultDisplay()) {
+          <div class="result-content">
+            <div class="result-expression">{{ resultDisplay()?.expression }}</div>
+            <div class="result-main">
+              <span class="result-value">{{ resultDisplay()?.value }}</span>
+              @if (!resultDisplay()?.isComparison && resultDisplay()?.unit) {
+                <span class="result-unit">{{ resultDisplay()?.unit }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <button type="button" class="reset-btn" (click)="resetForm()">↺ Reset Form</button>
+    </section>
+
+    <aside class="history-panel" [class.open]="mobileHistoryOpen()">
+      <div class="history-head">
+        <h3>History</h3>
+        <button type="button" class="clear-btn" (click)="clearHistory()">Clear All</button>
+      </div>
+
+      <div class="history-list">
+        @if (history().length === 0) {
+          <div class="history-empty">No calculations yet.</div>
+        } @else {
+          @for (record of history(); track record.id) {
+            <div class="history-item">
+              <div class="history-item-top">{{ record.operation }}</div>
+              <div class="history-item-expression">{{ formatHistoryExpression(record) }}</div>
+              <div class="history-item-result">{{ formatHistoryResult(record) }}</div>
+            </div>
+          }
+        }
+      </div>
+    </aside>
+  </main>
+</div>
