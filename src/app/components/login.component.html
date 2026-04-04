@@ -1,0 +1,112 @@
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <div>
+        <div class="auth-logo-text">Quantity Measurement</div>
+      </div>
+    </div>
+
+    <div class="auth-tabs">
+      <button class="auth-tab" [class.active]="activeTab() === 'login'" (click)="showLogin()">Login</button>
+      <button class="auth-tab" [class.active]="activeTab() === 'signup'" (click)="showSignup()">Sign Up</button>
+    </div>
+
+    <div class="auth-body">
+      <div class="form-panel" [class.active]="activeTab() === 'login'">
+        <div class="form-greeting">Welcome back</div>
+        <div class="form-sub">Sign in</div>
+
+        <div class="field-group">
+          <label class="field-label" for="login-email">Email</label>
+          <div class="field-wrap">
+            <input id="login-email" class="field-input" type="email" placeholder="you@example.com"
+              autocomplete="email" [value]="loginEmail()" (input)="loginEmail.set($any($event.target).value)"
+              (blur)="validateLoginBlur('email')" />
+          </div>
+          <span class="field-error">{{ loginEmailErr() }}</span>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="login-password">Password</label>
+          <div class="field-wrap">
+            <input id="login-password" class="field-input" [type]="showLoginPassword() ? 'text' : 'password'"
+              placeholder="Enter your password" autocomplete="current-password" [value]="loginPassword()"
+              (input)="loginPassword.set($any($event.target).value)" (keydown.enter)="onLogin()"
+              (blur)="validateLoginBlur('password')" />
+            <button class="eye-toggle" type="button" aria-label="Toggle password visibility" (click)="toggleLoginPassword()">
+              <span>{{ showLoginPassword() ? '🙈' : '👁️' }}</span>
+            </button>
+          </div>
+          <span class="field-error">{{ loginPassErr() }}</span>
+        </div>
+
+        <button class="auth-btn" [disabled]="loginLoading()" (click)="onLogin()">
+          @if (loginLoading()) {
+            <span class="spinner"></span>
+          } @else {
+            <span>Sign In</span>
+          }
+        </button>
+        <div class="auth-switch">Don't have an account? <a (click)="showSignup()">Create one</a></div>
+      </div>
+
+      <div class="form-panel" [class.active]="activeTab() === 'signup'">
+        <div class="form-greeting">Create account</div>
+        <div class="form-sub">Join</div>
+
+        <div class="field-group">
+          <label class="field-label" for="signup-name">Full Name</label>
+          <div class="field-wrap">
+            <input id="signup-name" class="field-input" type="text" placeholder="Your full name" autocomplete="name"
+              [value]="signupName()" (input)="signupName.set($any($event.target).value)" (blur)="validateSignupBlur('name')" />
+          </div>
+          <span class="field-error">{{ signupNameErr() }}</span>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="signup-email">Email</label>
+          <div class="field-wrap">
+            <input id="signup-email" class="field-input" type="email" placeholder="you@example.com" autocomplete="email"
+              [value]="signupEmail()" (input)="signupEmail.set($any($event.target).value)" (blur)="validateSignupBlur('email')" />
+          </div>
+          <span class="field-error">{{ signupEmailErr() }}</span>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="signup-password">Password</label>
+          <div class="field-wrap">
+            <input id="signup-password" class="field-input" [type]="showSignupPassword() ? 'text' : 'password'"
+              placeholder="Min 6 characters" autocomplete="new-password" [value]="signupPassword()"
+              (input)="signupPassword.set($any($event.target).value)" (blur)="validateSignupBlur('password')" />
+            <button class="eye-toggle" type="button" aria-label="Toggle password visibility" (click)="toggleSignupPassword()">
+              <span>{{ showSignupPassword() ? '🙈' : '👁️' }}</span>
+            </button>
+          </div>
+          <span class="field-error">{{ signupPassErr() }}</span>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="signup-mobile">Mobile Number</label>
+          <div class="field-wrap">
+            <input id="signup-mobile" class="field-input" type="tel" placeholder="10-digit mobile number" autocomplete="tel"
+              inputmode="numeric" maxlength="10" [value]="signupMobile()"
+              (input)="signupMobile.set($any($event.target).value)" (keydown.enter)="onSignup()"
+              (blur)="validateSignupBlur('mobile')" />
+          </div>
+          <span class="field-error">{{ signupMobileErr() }}</span>
+        </div>
+
+        <button class="auth-btn" [disabled]="signupLoading()" (click)="onSignup()">
+          @if (signupLoading()) {
+            <span class="spinner"></span>
+          } @else {
+            <span>Sign Up</span>
+          }
+        </button>
+        <div class="auth-switch">Already have an account? <a (click)="showLogin()">Sign in</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div [class]="toastClass()">{{ toast.message() }}</div>
+</div>

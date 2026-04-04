@@ -1,0 +1,61 @@
+# =========================
+# Node modules
+# =========================
+node_modules/
+
+# =========================
+# Angular build output
+# =========================
+dist/
+build/
+
+# =========================
+# Angular cache & Vite
+# =========================
+.angular/
+.vite/
+
+# =========================
+# TypeScript build files
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# IDE files
+# =========================
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Coverage (if testing added later)
+# =========================
+coverage/
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+
+backend/db.json
